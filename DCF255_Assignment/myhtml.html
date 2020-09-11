@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel = "stylesheet" href = "styles.css" type= "text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DCF 255 ASSIGNMENT</title>
+  </head>
+  <body>
+
+    <header>
+      <h1> DCF 255 ASSIGNMENT</h1>
+      
+      <h2> FTP PROTOCOL </h2>
+      <img src="/New-Project-1.png" alt="SCP Logo" height="400" width="750">
+    </header>
+
+    <main>
+      <h3> List of Responsibilities </h3>
+      <table id="responsibilities">
+        <tr>
+          <th> Name </th>
+          <th> Responsibilities </th>
+        </tr>
+        <tr>
+          <td> 
+            <ul>
+              <li>Andre Willomitzer</li>
+              <li>ID: 103710197 </li>
+            </ul>
+          </td>
+          <td>
+            <ol>
+              <li> Project Manager </li>
+              <li> Declares responsibilities</li>
+              <li> Publish and develop website </li>
+              <li> Assist team members </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td> 
+            <ul> 
+              <li>Guilherme Matsumoto Tommasini </li>
+              <li>ID: 114834187 </li>
+            </ul>
+          </td>
+          <td>
+            <ol>
+              <li> Put research together in a essay format</li>
+              <li> Assist in research </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td> 
+            <ul>
+              <li>Seyed Mohammad Ali Lohmousavi  </li>
+              <li> ID: 159309186 </li>
+            </ul>
+          </td> 
+          <td>
+            <ol>
+              <li> Research about SCP protocol</li>
+              <li> Research diagrams of SCP protocol</li>
+              <li> Assist in essay development </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+            <td> 
+              <ul>
+                <li>Stephane Kamdem Kamguia</li>
+                <li>ID: 135736189 </li>
+              </ul>
+            </td>
+            <td>
+              <ol>
+                <li> Project Manager </li>
+                <li> Declares responsibilities</li>
+                <li> Publish and develop website </li>
+                <li> Assist team members </li>
+              </ol>
+            </td>
+          </tr>
+      </table>
+
+      <h4>Abstract</h4>
+      <p> FTP stands for the file transfer protocol. It is one of the many 
+          protocols that govern the internet and how it may be used. FTP is used 
+          to transfer files and data from one machine to another, and is also commonly
+           used to download web applications. Files are transferred from the web, to you, 
+           over an FTP connection. FTP standards have many different versions, commands and reply c
+           ommands that were created throughtou the years.<br>
+        Keywords:  FTP, File Transfer Protocol, Internet 
+      </p>
+
+      <h5>Introduction</h5>
+      <p> 
+        The File Transfer Protocol, in short, FTP, is a standard network protocol used mainly 
+        to transfer files between two computers, a server and a client, over a computer network.<br>
+        It is one of the many protocols that govern the internet and how it may be used. FTP is 
+        used to transfer files and data from one machine to another, and is also commonly used to download web
+         applications. Files are transferred from the web, to you, over an FTP connection.<br>
+        Unlike some other protocols, FTP is a client-server protocol which means it relies on having a 
+        connection between the user requesting data, and the server that holds the data. Inside an FTP connection 
+        there are generally two channels used for communication between devices. One is used to handle the connection, 
+        and the other is used to handle the transfer of data.<br>
+        Some real world security issues of FTP is that it is prone to hacking due to packet capture, spoofing, 
+        and other malicious attacks. An example of an FTP client is WinSCP for windows that also supports SFTP which 
+        is the secure version of FTP. Packet capturing allows for your data to be stolen by interceptions.<br>
+        What is control connection?
+        For sending control information like user identification, password, commands to change the remote directory, commands to retrieve and store files, etc., FTP makes use of control connection. The control connection is initiated on port number 21.
+        What is data connection?<br>
+        For sending the actual file, FTP makes use of data connection. A data connection is initiated on port number 20.<br>
+        FTP sends the control information out-of-band as it uses a separate control connection. Some protocols send their
+         request and response header lines and the data in the same TCP connection. For this reason, they are 
+         said to send their control information in-band. HTTP and SMTP are such examples.<br>
+         Data Structures : FTP allows three types of data structures :<br>
+      </p>
+      <ol>
+          <li>File Structure – In file-structure there is no internal structure and the file is considered to be a continuous sequence of data bytes.</li>
+          <li>Record Structure – In record-structure the file is made up of sequential records.</li>
+          <li>Page Structure – In page-structure the file is made up of independent indexed pages.</li>
+      </ol>
+
+      <h6> History </h6>
+      <p>
+        In the beginning of the internet it was used mainly by the scientific 
+        society, computer programmers, engineers and others . There was no graphical interface and it was not user 
+        friendly at all. To transfer files between different systems was too complicated, so rapidly it became clear that a 
+        standardization of the commands was necessary, a protocol was needed.<br>
+        FTP was first published as a “Request for Comments” (RFC) in 1971, April 16 by Abhay Bhushan. 
+        Its first version was based on NCP (Network Control Protocol), until 1980’s, when NCP was replaced by TCP. 
+        Since then, several versions were created to better deal with security issues, firewalls and other 
+        updates in the network, such as IPv6.        
+      </p>
+
+      <h7> How does it work </h7>
+      <p>
+        FTP is an application layer protocol that transfers files between 
+        a remote and local machine. It runs over TTC protocol and it is a
+        duplex connection. Usually the user must log on in the file server before he can upload, 
+        download, delete, rename, move or copy from there. However FTP also supports anonymous connections, 
+        where no log on is necessary, but in this case, the server must allow this.<br>
+        There is an encrypted version of the protocol (SFTP), but it is not in the scope of this document.<br>
+        In a typical download FTP transaction the connections follows the steps:<br>
+        <ol>
+            <li>Query DNS for FTP server IP address;</li>
+            <li>FTP telnet connection setup and login -  if not anonymous;</li>
+            <li>Obtain list of directories and change to desired one;</li>
+            <li>Download the file using command FTP get.</li>
+        </ol>
+        
+      </p>
+
+      <h8>User commands in FTP: </h8>
+      <table>
+        <tr>
+            <td> 
+              <p>USER</p>
+            </td>
+            <td>
+             <p>This command sends the user identification to the server.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>PASS</p>
+            </td>
+            <td>
+             <p>This command sends the user password to the server.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>CWD</p>
+            </td>
+            <td>
+             <p>This command allows the user to work with a different 
+                directory or dataset for file storage or retrieval 
+                without altering his login or accounting information.
+            </p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>RMD</p>
+            </td>
+            <td>
+             <p>Removes the specified directory in the pathname provided.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>MKD</p>
+            </td>
+            <td>
+             <p>Creates a directory in the provided path with the given name.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>PWD</p>
+            </td>
+            <td>
+             <p>Returns a message containing the current directory in the system of the user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>RETR</p>
+            </td>
+            <td>
+             <p>This command causes the remote host to initiate a data connection and to send the requested file over the data connection.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>STOR</p>
+            </td>
+            <td>
+             <p>This command stores a file into the remote host directory.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>LIST</p>
+            </td>
+            <td>
+             <p>List all of the files in the specified directory.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>ABOR</p>
+            </td>
+            <td>
+             <p>A kill command that will cancel the previous FTP service and all data transfer associated with it.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>QUIT</p>
+            </td>
+            <td>
+             <p>Terminates the user’s connection with the FTP client if file transferring is not in progress.</p>
+            </td>
+        </tr>
+      </table>
+     <br>
+     <br>
+
+
+      <h9> Difference between File Transfer Protocol (FTP) and Secure File Transfer Protocol (SFTP): </h9>
+      <br>
+      <br>
+      <table>
+        <tr>
+            <td> 
+              <p>FTP</p>
+            </td>
+            <td>
+             <p>SFTP</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>FTP stands for File Transfer Protocol.</p>
+            </td>
+            <td>
+             <p>SFTP stands for Secure File Transfer Protocol.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>In FTP, a secure channel is not provided to transfer the files between the hosts.</p>
+            </td>
+            <td>
+             <p> 
+                In SFTP, a secure channel is provided to transfer the files between the hosts. </p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>FTP (File transfer protocol) is a part of TCP/IP protocol.</p>
+            </td>
+            <td>
+             <p>Secure File Transfer Protocol is a SSH protocol.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>FTP (File transfer protocol) usually runs on port no-21.</p>
+            </td>
+            <td>
+             <p>SFTP (Secure File Transfer Protocol) runs on port no-22.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>FTP establishes the connection under TCP protocol.</p>
+            </td>
+            <td>
+             <p>SFTP establishes the control connection under SSH protocol.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>FTP does not encrypt the data before sending.</p>
+            </td>
+            <td>
+             <p>SFTP, data is encrypted before sending.</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+
+
+      <h10>FTP reply codes:</h10>
+      <br>
+      <br>
+
+      <p>For every FTP command that we send to the server, the server will send one or more replies depending on the command. 
+          An FTP reply consists of 3 digits followed by some text. Each of the 3 digits have a special meaning. 
+          The first digit tells us whether the response is good, bad or incomplete and the second digit gives us more 
+          information about the message we get in the first digit. For example, if the first digit tells us that we have an error, 
+          by examining the second digit we can understand what kind of error we have (e.g. file system error, command syntax error).<br> 
+          Furthermore, the third digit is reserved for very detailed information.
+     </p>
+     <br>
+     <br>
+
+     <h11>General meaning of FTP reply codes based on their first digit:</h11>
+     <br>
+
+     <table>
+        <tr>
+            <td> 
+              <p>100 Series</p>
+            </td>
+            <td>
+             <p>The request has started, expect another reply before proceeding with a new command.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>200 Series</p>
+            </td>
+            <td>
+             <p>The request was successfully completed.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>300 Series</p>
+            </td>
+            <td>
+             <p>The command was accepted, but the request is on hold, pending receipt of further information.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>400 Series</p>
+            </td>
+            <td>
+                <p>The command wasn’t accepted and the requested action 
+                didn’t occur, but the error condition is temporary and 
+                the action may be requested again.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>500 Series</p>
+            </td>
+            <td>
+               <p>Syntax error, command unrecognized and the request did not
+                  take place. This may include errors such as the command 
+                  line too long.
+               </p>
+            </td>
+        </tr> 
+     </table>
+     <br>
+     <br>
+
+     <h12>General meaning of FTP reply codes based on their second digit:</h12>
+     <br>
+     <br> 
+     <br>
+      
+      <table>
+        <tr>
+            <td> 
+              <p>x0x</p>
+            </td>
+            <td>
+             <p>These replies refer to syntax errors</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>x1x</p>
+            </td>
+            <td>
+             <p>Replies to requests for information, like help or support.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>x2x</p>
+            </td>
+            <td>
+             <p>Replies regarding the control and data connections.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>x3x</p>
+            </td>
+            <td>
+             <p>Replies for the login process and accounting procedures.</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+              <p>x5x</p>
+            </td>
+            <td>
+             <p>Indicates the status of the Server file system</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </main>
+
+    <footer>
+      <h13> References </h13>
+      <cite>
+        <p>IETF. (2014, March). Request for Comments. Retrieved April, 4, 2020, from<br>
+            <a href="https://tools.ietf.org/html/rfc959">https://tools.ietf.org/html/rfc959</a><br>
+           Wikipedia.(2020, March 4). File Transfer Protocol. Retrieved April 5, 2020, from<br>
+           <a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">https://en.wikipedia.org/wiki/File_Transfer_Protocol</a><br>
+                EventHelix.(n.d.).TCP connection setup and release.Retrieved April 5, 2020 from<br>
+             <a href="http://www.eventhelix.com/RealtimeMantra/Networking/tcp/">http://www.eventhelix.com/RealtimeMantra/Networking/tcp/</a><br>
+           GeeksforGeeks.(n.d.).FTP in Application Layer.Retrieved April 7, 2020 from<br>
+             <a href="https://www.geeksforgeeks.org/file-transfer-protocol-ftp-in-application-layer/">https://www.geeksforgeeks.org/file-transfer-protocol-ftp-in-application-layer/</a><br>
+            TechTarget.(n.d.).FTP (File Transfer Protocol).Retrieved April 7, 2020 from<br>
+            <a href="https://searchnetworking.techtarget.com/definition/File-Transfer-Protocol-FTP">https://searchnetworking.techtarget.com/definition/File-Transfer-Protocol-FTP</a><br>
+            Networksorcery.(n.d.).FTP, File Transfer Protocol.Retrieved April 7, 2020 from <br>
+            <a href="http://www.networksorcery.com/enp/protocol/ftp.htm">http://www.networksorcery.com/enp/protocol/ftp.htm</a><br>
+            Medium.(2017, June 3).TCP File Transfer Protocol sequence diagram.Retrieved April 7, 2020 from <br>
+            <a href="https://medium.com/tcp-ip/tcp-file-transfer-protocol-sequence-diagram-f899edc543de">https://medium.com/tcp-ip/tcp-file-transfer-protocol-sequence-diagram-f899edc543de</a>
+        </p>
+      </cite>
+
+
+      <p> Contact Information </p>
+      <nav>
+        <ul>
+          <li>
+            gmatsumoto-tommasini@myseneca.ca
+          </li>
+          <li>
+            smalohmousav@myseneca.ca
+          </li>
+          <li>
+            awillomitzer@myseneca.ca
+          </li>
+          <li>
+              skamdem-kamguia@myseneca.ca
+          </li>
+        </ul>
+    </footer>
+
+    
+  </body>
+</html>
